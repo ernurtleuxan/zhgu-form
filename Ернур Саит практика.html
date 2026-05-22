@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZHGU Анкета</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#f8f5ef,#f1e0cb);
+min-height:100vh;
+padding:40px 20px;
+overflow-x:hidden;
+position:relative;
+animation:bgMove 10s ease-in-out infinite alternate;
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+0%{
+background:linear-gradient(135deg,#f8f5ef,#f1e0cb);
+}
+
+100%{
+background:linear-gradient(135deg,#f5ede1,#ead5bc);
+}
+
+}
+
+body::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:350px;
+height:350px;
+background:#003ea8;
+clip-path:polygon(0 0,100% 0,0 100%);
+z-index:-1;
+opacity:.95;
+}
+
+body::after{
+content:"";
+position:absolute;
+bottom:0;
+right:0;
+width:350px;
+height:350px;
+background:#003ea8;
+clip-path:polygon(100% 0,100% 100%,0 100%);
+z-index:-1;
+opacity:.95;
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+/* CARD */
+
+.card{
+width:100%;
+max-width:1150px;
+background:white;
+border-radius:34px;
+padding:50px;
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+animation:showCard 1s ease;
+}
+
+@keyframes showCard{
+
+from{
+opacity:0;
+transform:translateY(40px) scale(.96);
+}
+
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+}
+
+/* FLOATING EFFECTS */
+
+.card::before{
+content:"";
+position:absolute;
+top:-120px;
+left:-120px;
+width:280px;
+height:280px;
+background:rgba(0,62,168,.05);
+border-radius:50%;
+animation:float1 7s ease-in-out infinite;
+}
+
+.card::after{
+content:"";
+position:absolute;
+bottom:-100px;
+right:-100px;
+width:240px;
+height:240px;
+background:rgba(215,178,140,.16);
+border-radius:50%;
+animation:float2 9s ease-in-out infinite;
+}
+
+@keyframes float1{
+
+50%{
+transform:translateY(30px) translateX(20px);
+}
+
+}
+
+@keyframes float2{
+
+50%{
+transform:translateY(-20px) translateX(-20px);
+}
+
+}
+
+/* LOGO */
+
+.topLogo{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+animation:logoShow 1.1s ease;
+}
+
+.topLogo img{
+width:130px;
+height:auto;
+filter:drop-shadow(0 10px 20px rgba(0,62,168,.15));
+transition:.4s;
+}
+
+.topLogo img:hover{
+transform:scale(1.05) rotate(-2deg);
+}
+
+@keyframes logoShow{
+
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+font-size:72px;
+font-weight:700;
+color:#003ea8;
+letter-spacing:4px;
+margin-bottom:10px;
+animation:titleShow 1s ease;
+}
+
+@keyframes titleShow{
+
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.line{
+width:180px;
+height:6px;
+border-radius:20px;
+background:linear-gradient(90deg,#003ea8,#d8b38c);
+margin:0 auto 50px;
+}
+
+/* SECTION */
+
+.section{
+display:flex;
+align-items:center;
+gap:14px;
+margin:40px 0 25px;
+}
+
+.sectionLogo img{
+width:42px;
+height:42px;
+object-fit:contain;
+}
+
+.section span{
+background:#003ea8;
+color:white;
+padding:12px 24px;
+font-size:27px;
+font-weight:600;
+border-radius:14px 14px 14px 0;
+position:relative;
+overflow:hidden;
+}
+
+.section span::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,.2);
+transform:skewX(-25deg);
+animation:shine 4s infinite;
+}
+
+@keyframes shine{
+
+100%{
+left:200%;
+}
+
+}
+
+.sectionLine{
+flex:1;
+height:3px;
+background:#003ea8;
+opacity:.25;
+}
+
+/* GRIDS */
+
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.grid3{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:24px;
+margin-top:22px;
+}
+
+.addressGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:26px;
+margin-top:25px;
+}
+
+/* INPUT */
+
+.inputBox{
+margin-bottom:20px;
+animation:fadeInput .8s ease;
+}
+
+@keyframes fadeInput{
+
+from{
+opacity:0;
+transform:translateY(15px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+label{
+display:block;
+margin-bottom:10px;
+font-size:17px;
+font-weight:600;
+color:#003ea8;
+}
+
+input,
+select{
+width:100%;
+padding:17px 18px;
+border:2px solid #d7e0f4;
+border-radius:16px;
+outline:none;
+font-size:16px;
+background:#fff;
+transition:.35s;
+color:#222;
+}
+
+input::placeholder{
+color:#999;
+}
+
+input:hover,
+select:hover{
+transform:translateY(-2px);
+border-color:#003ea8;
+}
+
+input:focus,
+select:focus{
+border-color:#003ea8;
+box-shadow:0 0 0 5px rgba(0,62,168,.08);
+transform:scale(1.02);
+}
+
+/* ADDRESS */
+
+.addressCard{
+background:#faf7f2;
+padding:30px;
+border-radius:24px;
+border:1px solid #ece4da;
+transition:.35s;
+}
+
+.addressCard:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(0,62,168,.08);
+}
+
+.addressTitle{
+font-size:30px;
+font-weight:700;
+color:#003ea8;
+margin-bottom:24px;
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+margin-top:40px;
+padding:22px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#003ea8,#0054d1);
+color:white;
+font-size:24px;
+font-weight:700;
+cursor:pointer;
+transition:.35s;
+position:relative;
+overflow:hidden;
+}
+
+button::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:120%;
+height:100%;
+background:rgba(255,255,255,.25);
+transform:skewX(-25deg);
+transition:.8s;
+}
+
+button:hover::before{
+left:130%;
+}
+
+button:hover{
+transform:translateY(-4px) scale(1.01);
+box-shadow:0 15px 30px rgba(0,62,168,.25);
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:25px;
+text-align:center;
+font-size:15px;
+color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.title{
+font-size:48px;
+}
+
+.grid2,
+.grid3,
+.addressGrid{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:28px;
+}
+
+.section span{
+font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<!-- LOGO -->
+
+<div class="topLogo">
+<img src="https://avatars.mds.yandex.net/i?id=9bf7a2448018f620fee3780420883530_l-5889061-images-thumbs&n=13" alt="ZHGU Logo">
+</div>
+
+<!-- TITLE -->
+
+<div class="title">АНКЕТА</div>
+
+<div class="line"></div>
+
+<form id="form">
+
+<!-- ӘКЕСІ -->
+
+<div class="section">
+
+<div class="sectionLogo">
+<img src="https://avatars.mds.yandex.net/i?id=9bf7a2448018f620fee3780420883530_l-5889061-images-thumbs&n=13">
+</div>
+
+<span>ӘКЕСІ ТУРАЛЫ</span>
+
+<div class="sectionLine"></div>
+
+</div>
+
+<div class="grid2">
+
+<div class="inputBox">
+<label>Әкесінің аты-жөні</label>
+<input type="text" name="father_name" placeholder="Толық аты-жөні" required>
+</div>
+
+<div class="inputBox">
+<label>Әкесінің жұмыс орны</label>
+<input type="text" name="father_work" placeholder="Жұмыс орны" required>
+</div>
+
+</div>
+
+<div class="grid3">
+
+<div class="inputBox">
+<label>Үй нөмірі</label>
+<input type="tel" name="father_home_phone" placeholder="+7 777 777 77 77">
+</div>
+
+<div class="inputBox">
+<label>Жұмыс нөмірі</label>
+<input type="tel" name="father_work_phone" placeholder="+7 777 777 77 77">
+</div>
+
+<div class="inputBox">
+<label>Қосымша нөмірі</label>
+<input type="tel" name="father_extra_phone" placeholder="+7 777 777 77 77">
+</div>
+
+</div>
+
+<!-- ШЕШЕСІ -->
+
+<div class="section">
+
+<div class="sectionLogo">
+<img src="https://avatars.mds.yandex.net/i?id=9bf7a2448018f620fee3780420883530_l-5889061-images-thumbs&n=13">
+</div>
+
+<span>ШЕШЕСІ ТУРАЛЫ</span>
+
+<div class="sectionLine"></div>
+
+</div>
+
+<div class="grid2">
+
+<div class="inputBox">
+<label>Шешесінің аты-жөні</label>
+<input type="text" name="mother_name" placeholder="Толық аты-жөні" required>
+</div>
+
+<div class="inputBox">
+<label>Шешесінің жұмыс орны</label>
+<input type="text" name="mother_work" placeholder="Жұмыс орны" required>
+</div>
+
+</div>
+
+<div class="grid3">
+
+<div class="inputBox">
+<label>Үй нөмірі</label>
+<input type="tel" name="mother_home_phone" placeholder="+7 777 777 77 77">
+</div>
+
+<div class="inputBox">
+<label>Жұмыс нөмірі</label>
+<input type="tel" name="mother_work_phone" placeholder="+7 777 777 77 77">
+</div>
+
+<div class="inputBox">
+<label>Қосымша нөмірі</label>
+<input type="tel" name="mother_extra_phone" placeholder="+7 777 777 77 77">
+</div>
+
+</div>
+
+<!-- МЕКЕН ЖАЙ -->
+
+<div class="section">
+
+<div class="sectionLogo">
+<img src="https://avatars.mds.yandex.net/i?id=9bf7a2448018f620fee3780420883530_l-5889061-images-thumbs&n=13">
+</div>
+
+<span>МЕКЕН ЖАЙ</span>
+
+<div class="sectionLine"></div>
+
+</div>
+
+<div class="inputBox">
+
+<label>Облыс</label>
+
+<select name="region" required>
+
+<option value="">Облысты таңдаңыз</option>
+
+<option>Абай облысы</option>
+<option>Ақмола облысы</option>
+<option>Ақтөбе облысы</option>
+<option>Алматы облысы</option>
+<option>Атырау облысы</option>
+<option>Батыс Қазақстан облысы</option>
+<option>Жамбыл облысы</option>
+<option>Жетісу облысы</option>
+<option>Қарағанды облысы</option>
+<option>Қостанай облысы</option>
+<option>Қызылорда облысы</option>
+<option>Маңғыстау облысы</option>
+<option>Павлодар облысы</option>
+<option>Солтүстік Қазақстан облысы</option>
+<option>Түркістан облысы</option>
+<option>Ұлытау облысы</option>
+<option>Шығыс Қазақстан облысы</option>
+
+<option>Алматы</option>
+<option>Астана</option>
+<option>Шымкент</option>
+
+</select>
+
+</div>
+
+<div class="inputBox">
+
+<label>Ауыл ма, қала ма?</label>
+
+<<select id="placeType" name="placeType" required>
+
+<option value="">Таңдаңыз</option>
+<option value="Ауыл">Ауыл</option>
+<option value="Қала">Қала</option>
+
+</select>
+
+</div>
+
+<div class="addressGrid">
+
+<!-- АУЫЛ -->
+
+<div class="addressCard" id="villageBox">
+
+<div class="addressTitle">АУЫЛ</div>
+
+<div class="inputBox">
+<label>Ауыл атауы</label>
+<input type="text" name="village_name" placeholder="Ауыл атауы">
+</div>
+
+<div class="inputBox">
+<label>Көше атауы</label>
+<input type="text" name="village_street" placeholder="Көше атауы">
+</div>
+
+<div class="inputBox">
+<label>Үй нөмірі</label>
+<input type="text" name="village_house" placeholder="Үй нөмірі">
+</div>
+
+</div>
+
+<!-- ҚАЛА -->
+
+<div class="addressCard" id="cityBox">
+
+<div class="addressTitle">ҚАЛА</div>
+
+<div class="inputBox">
+
+<label>Қаланы таңдаңыз</label>
+
+<select name="city">
+
+<option value="">Қаланы таңдаңыз</option>
+
+<option>Алматы</option>
+<option>Астана</option>
+<option>Шымкент</option>
+<option>Ақтау</option>
+<option>Ақтөбе</option>
+<option>Алтай</option>
+<option>Арал</option>
+<option>Арқалық</option>
+<option>Арыс</option>
+<option>Атбасар</option>
+<option>Атырау</option>
+<option>Аягөз</option>
+<option>Балқаш</option>
+<option>Булаево</option>
+<option>Державинск</option>
+<option>Екібастұз</option>
+<option>Ерейментау</option>
+<option>Есік</option>
+<option>Жаңаөзен</option>
+<option>Жаңатас</option>
+<option>Жаркент</option>
+<option>Жезқазған</option>
+<option>Жем</option>
+<option>Жетісай</option>
+<option>Зайсан</option>
+<option>Кентау</option>
+<option>Көкшетау</option>
+<option>Қандыағаш</option>
+<option>Қапшағай</option>
+<option>Қарағанды</option>
+<option>Қаражал</option>
+<option>Қаратау</option>
+<option>Қарқаралы</option>
+<option>Қаскелең</option>
+<option>Қонаев</option>
+<option>Қостанай</option>
+<option>Қосшы</option>
+<option>Құлсары</option>
+<option>Қызылорда</option>
+<option>Леңгір</option>
+<option>Лисаковск</option>
+<option>Макинск</option>
+<option>Мамлютка</option>
+<option>Павлодар</option>
+<option>Петропавл</option>
+<option>Приозерск</option>
+<option>Риддер</option>
+<option>Рудный</option>
+<option>Саран</option>
+<option>Сарқан</option>
+<option>Сарыағаш</option>
+<option>Сәтбаев</option>
+<option>Семей</option>
+<option>Сергеевка</option>
+<option>Степногорск</option>
+<option>Степняк</option>
+<option>Тайынша</option>
+<option>Талғар</option>
+<option>Талдықорған</option>
+<option>Тараз</option>
+<option>Текелі</option>
+<option>Темір</option>
+<option>Теміртау</option>
+<option>Түркістан</option>
+<option>Үшарал</option>
+<option>Өскемен</option>
+<option>Шалқар</option>
+<option>Шардара</option>
+<option>Шахтинск</option>
+<option>Шемонаиха</option>
+
+</select>
+
+</div>
+
+<div class="inputBox">
+<label>Көше атауы</label>
+<input type="text" name="city_street" placeholder="Көше атауы">
+</div>
+
+<div class="grid2">
+
+<div class="inputBox">
+<label>Үй нөмірі</label>
+<input type="text" name="city_house" placeholder="Үй нөмірі">
+</div>
+
+<div class="inputBox">
+<label>Қай этаж</label>
+<input type="text" name="city_floor" placeholder="Этаж">
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<button type="submit" id="submitBtn">
+ЖІБЕРУ
+</button>
+
+</form>
+
+<div class="footer">
+© ZHGU Smart Form System
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* GOOGLE SCRIPT URL */
+
+const scriptURL =
+'https://script.google.com/macros/s/AKfycbyUyaocO9OPiWv_ThEbgn18dqCRez3jrb2AK049cddsskycOW-J_QTioJ3t0oLEINv-ng/exec'
+
+/* FORM */
+
+const form = document.getElementById('form')
+const button = document.getElementById('submitBtn')
+
+/* PLACE TYPE */
+
+const placeType = document.getElementById('placeType')
+
+const villageBox = document.getElementById('villageBox')
+const cityBox = document.getElementById('cityBox')
+
+/* DEFAULT */
+
+villageBox.style.display = 'none'
+cityBox.style.display = 'none'
+
+/* SWITCH */
+
+placeType.addEventListener('change',()=>{
+
+if(placeType.value === 'Ауыл'){
+
+villageBox.style.display = 'block'
+cityBox.style.display = 'none'
+
+}
+
+else if(placeType.value === 'Қала'){
+
+cityBox.style.display = 'block'
+villageBox.style.display = 'none'
+
+}
+
+else{
+
+villageBox.style.display = 'none'
+cityBox.style.display = 'none'
+
+}
+
+})
+
+/* SEND */
+
+form.addEventListener('submit',(e)=>{
+
+e.preventDefault()
+
+button.innerText = 'ЖІБЕРІЛУДЕ...'
+button.disabled = true
+
+fetch(scriptURL,{
+method:'POST',
+body:new FormData(form)
+})
+
+.then(()=>{
+
+alert('Сәтті жіберілді 🚀')
+
+form.reset()
+
+villageBox.style.display = 'none'
+cityBox.style.display = 'none'
+
+})
+
+.catch(()=>{
+
+alert('Қате шықты ❌')
+
+})
+
+.finally(()=>{
+
+button.innerText = 'ЖІБЕРУ'
+button.disabled = false
+
+})
+
+})
+
+</script>
+
+</body>
+</html>
