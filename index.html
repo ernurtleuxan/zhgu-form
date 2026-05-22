@@ -26,8 +26,6 @@ position:relative;
 animation:bgMove 10s ease-in-out infinite alternate;
 }
 
-/* BACKGROUND ANIMATION */
-
 @keyframes bgMove{
 
 0%{
@@ -66,15 +64,11 @@ z-index:-1;
 opacity:.95;
 }
 
-/* CONTAINER */
-
 .container{
 width:100%;
 display:flex;
 justify-content:center;
 }
-
-/* CARD */
 
 .card{
 width:100%;
@@ -101,8 +95,6 @@ transform:translateY(0) scale(1);
 }
 
 }
-
-/* FLOATING EFFECTS */
 
 .card::before{
 content:"";
@@ -144,8 +136,6 @@ transform:translateY(-20px) translateX(-20px);
 
 }
 
-/* LOGO */
-
 .topLogo{
 display:flex;
 justify-content:center;
@@ -178,8 +168,6 @@ transform:translateY(0);
 
 }
 
-/* TITLE */
-
 .title{
 text-align:center;
 font-size:72px;
@@ -211,8 +199,6 @@ border-radius:20px;
 background:linear-gradient(90deg,#003ea8,#d8b38c);
 margin:0 auto 50px;
 }
-
-/* SECTION */
 
 .section{
 display:flex;
@@ -265,8 +251,6 @@ background:#003ea8;
 opacity:.25;
 }
 
-/* GRIDS */
-
 .grid2{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -286,8 +270,6 @@ grid-template-columns:1fr 1fr;
 gap:26px;
 margin-top:25px;
 }
-
-/* INPUT */
 
 .inputBox{
 margin-bottom:20px;
@@ -346,8 +328,6 @@ box-shadow:0 0 0 5px rgba(0,62,168,.08);
 transform:scale(1.02);
 }
 
-/* ADDRESS */
-
 .addressCard{
 background:#faf7f2;
 padding:30px;
@@ -367,8 +347,6 @@ font-weight:700;
 color:#003ea8;
 margin-bottom:24px;
 }
-
-/* BUTTON */
 
 button{
 width:100%;
@@ -407,16 +385,12 @@ transform:translateY(-4px) scale(1.01);
 box-shadow:0 15px 30px rgba(0,62,168,.25);
 }
 
-/* FOOTER */
-
 .footer{
 margin-top:25px;
 text-align:center;
 font-size:15px;
 color:#666;
 }
-
-/* MOBILE */
 
 @media(max-width:950px){
 
@@ -449,21 +423,15 @@ font-size:22px;
 
 <div class="card">
 
-<!-- LOGO -->
-
 <div class="topLogo">
 <img src="https://avatars.mds.yandex.net/i?id=9bf7a2448018f620fee3780420883530_l-5889061-images-thumbs&n=13" alt="ZHGU Logo">
 </div>
-
-<!-- TITLE -->
 
 <div class="title">АНКЕТА</div>
 
 <div class="line"></div>
 
 <form id="form">
-
-<!-- ӘКЕСІ -->
 
 <div class="section">
 
@@ -510,8 +478,6 @@ font-size:22px;
 
 </div>
 
-<!-- ШЕШЕСІ -->
-
 <div class="section">
 
 <div class="sectionLogo">
@@ -556,8 +522,6 @@ font-size:22px;
 </div>
 
 </div>
-
-<!-- МЕКЕН ЖАЙ -->
 
 <div class="section">
 
@@ -607,9 +571,216 @@ font-size:22px;
 
 <div class="inputBox">
 
+<label>Аудан</label>
+
+<select name="district" required>
+
+<option value="">Ауданды таңдаңыз</option>
+
+<!-- АБАЙ ОБЛЫСЫ -->
+<option>Абай ауданы</option>
+<option>Ақсуат ауданы</option>
+<option>Аягөз ауданы</option>
+<option>Бесқарағай ауданы</option>
+<option>Бородулиха ауданы</option>
+<option>Жарма ауданы</option>
+<option>Көкпекті ауданы</option>
+<option>Мақаншы ауданы</option>
+<option>Үржар ауданы</option>
+
+<!-- АҚМОЛА -->
+<option>Аршалы ауданы</option>
+<option>Астрахан ауданы</option>
+<option>Атбасар ауданы</option>
+<option>Біржан сал ауданы</option>
+<option>Бұланды ауданы</option>
+<option>Егіндікөл ауданы</option>
+<option>Ерейментау ауданы</option>
+<option>Есіл ауданы</option>
+<option>Жақсы ауданы</option>
+<option>Жарқайың ауданы</option>
+<option>Зеренді ауданы</option>
+<option>Қорғалжын ауданы</option>
+<option>Сандықтау ауданы</option>
+<option>Целиноград ауданы</option>
+<option>Шортанды ауданы</option>
+
+<!-- АҚТӨБЕ -->
+<option>Алға ауданы</option>
+<option>Әйтеке би ауданы</option>
+<option>Байғанин ауданы</option>
+<option>Ырғыз ауданы</option>
+<option>Қарғалы ауданы</option>
+<option>Қобда ауданы</option>
+<option>Мартөк ауданы</option>
+<option>Мұғалжар ауданы</option>
+<option>Ойыл ауданы</option>
+<option>Темір ауданы</option>
+<option>Хромтау ауданы</option>
+<option>Шалқар ауданы</option>
+
+<!-- АЛМАТЫ ОБЛЫСЫ -->
+<option>Балқаш ауданы</option>
+<option>Еңбекшіқазақ ауданы</option>
+<option>Жамбыл ауданы</option>
+<option>Іле ауданы</option>
+<option>Қарасай ауданы</option>
+<option>Қарасай ауданы</option>
+<option>Кеген ауданы</option>
+<option>Райымбек ауданы</option>
+<option>Талғар ауданы</option>
+<option>Ұйғыр ауданы</option>
+
+<!-- АТЫРАУ -->
+<option>Жылыой ауданы</option>
+<option>Исатай ауданы</option>
+<option>Құрманғазы ауданы</option>
+<option>Қызылқоға ауданы</option>
+<option>Индер ауданы</option>
+<option>Мақат ауданы</option>
+
+<!-- БАТЫС ҚАЗАҚСТАН -->
+<option>Ақжайық ауданы</option>
+<option>Бәйтерек ауданы</option>
+<option>Бөкей ордасы ауданы</option>
+<option>Бөрлі ауданы</option>
+<option>Жаңақала ауданы</option>
+<option>Жәнібек ауданы</option>
+<option>Казталов ауданы</option>
+<option>Қаратөбе ауданы</option>
+<option>Сырым ауданы</option>
+<option>Тасқала ауданы</option>
+<option>Теректі ауданы</option>
+<option>Шыңғырлау ауданы</option>
+
+<!-- ЖАМБЫЛ -->
+<option>Байзақ ауданы</option>
+<option>Жамбыл ауданы</option>
+<option>Жуалы ауданы</option>
+<option>Қордай ауданы</option>
+<option>Меркі ауданы</option>
+<option>Мойынқұм ауданы</option>
+<option>Сарысу ауданы</option>
+<option>Талас ауданы</option>
+<option>Тұрар Рысқұлов ауданы</option>
+<option>Шу ауданы</option>
+
+<!-- ЖЕТІСУ -->
+<option>Ақсу ауданы</option>
+<option>Алакөл ауданы</option>
+<option>Ескелді ауданы</option>
+<option>Кербұлақ ауданы</option>
+<option>Көксу ауданы</option>
+<option>Қаратал ауданы</option>
+<option>Панфилов ауданы</option>
+<option>Сарқан ауданы</option>
+
+<!-- ҚАРАҒАНДЫ -->
+<option>Ақтоғай ауданы</option>
+<option>Бұқар жырау ауданы</option>
+<option>Қарқаралы ауданы</option>
+<option>Нұра ауданы</option>
+<option>Осакаров ауданы</option>
+<option>Шет ауданы</option>
+
+<!-- ҚОСТАНАЙ -->
+<option>Алтынсарин ауданы</option>
+<option>Амангелді ауданы</option>
+<option>Әулиекөл ауданы</option>
+<option>Денисов ауданы</option>
+<option>Жангелдин ауданы</option>
+<option>Жітіқара ауданы</option>
+<option>Қамысты ауданы</option>
+<option>Қарабалық ауданы</option>
+<option>Қарасу ауданы</option>
+<option>Қостанай ауданы</option>
+<option>Меңдіқара ауданы</option>
+<option>Науырзым ауданы</option>
+<option>Сарыкөл ауданы</option>
+<option>Федоров ауданы</option>
+
+<!-- ҚЫЗЫЛОРДА -->
+<option>Арал ауданы</option>
+<option>Жалағаш ауданы</option>
+<option>Жаңақорған ауданы</option>
+<option>Қазалы ауданы</option>
+<option>Қармақшы ауданы</option>
+<option>Сырдария ауданы</option>
+<option>Шиелі ауданы</option>
+
+<!-- МАҢҒЫСТАУ -->
+<option>Бейнеу ауданы</option>
+<option>Қарақия ауданы</option>
+<option>Маңғыстау ауданы</option>
+<option>Мұнайлы ауданы</option>
+<option>Түпқараған ауданы</option>
+
+<!-- ПАВЛОДАР -->
+<option>Аққулы ауданы</option>
+<option>Ақтоғай ауданы</option>
+<option>Баянауыл ауданы</option>
+<option>Ертіс ауданы</option>
+<option>Железин ауданы</option>
+<option>Май ауданы</option>
+<option>Павлодар ауданы</option>
+<option>Теренкөл ауданы</option>
+<option>Успен ауданы</option>
+
+<!-- СОЛТҮСТІК ҚАЗАҚСТАН -->
+<option>Айыртау ауданы</option>
+<option>Ақжар ауданы</option>
+<option>Аққайың ауданы</option>
+<option>Ғабит Мүсірепов ауданы</option>
+<option>Есіл ауданы</option>
+<option>Жамбыл ауданы</option>
+<option>Мағжан Жұмабаев ауданы</option>
+<option>Мамлют ауданы</option>
+<option>Қызылжар ауданы</option>
+<option>Тайынша ауданы</option>
+<option>Тимирязев ауданы</option>
+<option>Уәлиханов ауданы</option>
+<option>Шал ақын ауданы</option>
+
+<!-- ТҮРКІСТАН -->
+<option>Арыс ауданы</option>
+<option>Бәйдібек ауданы</option>
+<option>Жетісай ауданы</option>
+<option>Келес ауданы</option>
+<option>Қазығұрт ауданы</option>
+<option>Мақтаарал ауданы</option>
+<option>Ордабасы ауданы</option>
+<option>Отырар ауданы</option>
+<option>Сайрам ауданы</option>
+<option>Сарыағаш ауданы</option>
+<option>Созақ ауданы</option>
+<option>Төлеби ауданы</option>
+<option>Түлкібас ауданы</option>
+<option>Шардара ауданы</option>
+
+<!-- ҰЛЫТАУ -->
+<option>Жаңаарқа ауданы</option>
+<option>Ұлытау ауданы</option>
+
+<!-- ШЫҒЫС ҚАЗАҚСТАН -->
+<option>Алтай ауданы</option>
+<option>Глубокое ауданы</option>
+<option>Зайсан ауданы</option>
+<option>Катонқарағай ауданы</option>
+<option>Күршім ауданы</option>
+<option>Самар ауданы</option>
+<option>Тарбағатай ауданы</option>
+<option>Ұлан ауданы</option>
+<option>Шемонаиха ауданы</option>
+
+</select>
+
+</div>
+
+<div class="inputBox">
+
 <label>Ауыл ма, қала ма?</label>
 
-<<select id="placeType" name="placeType" required>
+<select id="placeType" name="placeType" required>
 
 <option value="">Таңдаңыз</option>
 <option value="Ауыл">Ауыл</option>
@@ -620,8 +791,6 @@ font-size:22px;
 </div>
 
 <div class="addressGrid">
-
-<!-- АУЫЛ -->
 
 <div class="addressCard" id="villageBox">
 
@@ -644,8 +813,6 @@ font-size:22px;
 
 </div>
 
-<!-- ҚАЛА -->
-
 <div class="addressCard" id="cityBox">
 
 <div class="addressTitle">ҚАЛА</div>
@@ -663,71 +830,6 @@ font-size:22px;
 <option>Шымкент</option>
 <option>Ақтау</option>
 <option>Ақтөбе</option>
-<option>Алтай</option>
-<option>Арал</option>
-<option>Арқалық</option>
-<option>Арыс</option>
-<option>Атбасар</option>
-<option>Атырау</option>
-<option>Аягөз</option>
-<option>Балқаш</option>
-<option>Булаево</option>
-<option>Державинск</option>
-<option>Екібастұз</option>
-<option>Ерейментау</option>
-<option>Есік</option>
-<option>Жаңаөзен</option>
-<option>Жаңатас</option>
-<option>Жаркент</option>
-<option>Жезқазған</option>
-<option>Жем</option>
-<option>Жетісай</option>
-<option>Зайсан</option>
-<option>Кентау</option>
-<option>Көкшетау</option>
-<option>Қандыағаш</option>
-<option>Қапшағай</option>
-<option>Қарағанды</option>
-<option>Қаражал</option>
-<option>Қаратау</option>
-<option>Қарқаралы</option>
-<option>Қаскелең</option>
-<option>Қонаев</option>
-<option>Қостанай</option>
-<option>Қосшы</option>
-<option>Құлсары</option>
-<option>Қызылорда</option>
-<option>Леңгір</option>
-<option>Лисаковск</option>
-<option>Макинск</option>
-<option>Мамлютка</option>
-<option>Павлодар</option>
-<option>Петропавл</option>
-<option>Приозерск</option>
-<option>Риддер</option>
-<option>Рудный</option>
-<option>Саран</option>
-<option>Сарқан</option>
-<option>Сарыағаш</option>
-<option>Сәтбаев</option>
-<option>Семей</option>
-<option>Сергеевка</option>
-<option>Степногорск</option>
-<option>Степняк</option>
-<option>Тайынша</option>
-<option>Талғар</option>
-<option>Талдықорған</option>
-<option>Тараз</option>
-<option>Текелі</option>
-<option>Темір</option>
-<option>Теміртау</option>
-<option>Түркістан</option>
-<option>Үшарал</option>
-<option>Өскемен</option>
-<option>Шалқар</option>
-<option>Шардара</option>
-<option>Шахтинск</option>
-<option>Шемонаиха</option>
 
 </select>
 
@@ -772,29 +874,19 @@ font-size:22px;
 
 <script>
 
-/* GOOGLE SCRIPT URL */
-
 const scriptURL =
 'https://script.google.com/macros/s/AKfycbyUyaocO9OPiWv_ThEbgn18dqCRez3jrb2AK049cddsskycOW-J_QTioJ3t0oLEINv-ng/exec'
 
-/* FORM */
-
 const form = document.getElementById('form')
 const button = document.getElementById('submitBtn')
-
-/* PLACE TYPE */
 
 const placeType = document.getElementById('placeType')
 
 const villageBox = document.getElementById('villageBox')
 const cityBox = document.getElementById('cityBox')
 
-/* DEFAULT */
-
 villageBox.style.display = 'none'
 cityBox.style.display = 'none'
-
-/* SWITCH */
 
 placeType.addEventListener('change',()=>{
 
@@ -820,8 +912,6 @@ cityBox.style.display = 'none'
 }
 
 })
-
-/* SEND */
 
 form.addEventListener('submit',(e)=>{
 
